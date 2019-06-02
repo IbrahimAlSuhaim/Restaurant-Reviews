@@ -180,7 +180,11 @@ createRestaurantHTML = (restaurant) => {
   more.href = DBHelper.urlForRestaurant(restaurant);
   li.append(more)
 
-  return li
+  const liContainer = document.createElement('div');
+  liContainer.className = 'li-container';
+  liContainer.append(li);
+
+  return liContainer;
 }
 
 /**
