@@ -1,8 +1,4 @@
 @charset "utf-8";
-/* Media queries */
-
-
-
 /* CSS Document */
 
 body,td,th,p{
@@ -130,11 +126,14 @@ nav h1 a {
 }
 
 /* ====================== Restaurant Listing ====================== */
+.li-container{
+	width: 100%;
+}
 #restaurants-list {
   background-color: #f3f3f3;
   list-style: outside none none;
   margin: 0;
-  padding: 0;
+  padding: 1%;
   text-align: center;
 	display: flex;
   flex-wrap: wrap;
@@ -142,7 +141,7 @@ nav h1 a {
 #restaurants-list li {
   background-color: #fff;
   border: 2px solid #ccc;
-  margin: 15px;
+  margin: 2%;
   min-height: 380px;
   padding: 0 30px 25px;
   text-align: left;
@@ -269,4 +268,22 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+
+/* Media queries */
+
+@media screen and (min-width : 480px) {
+	.li-container {
+		width: 50%;
+	}
+}
+@media screen and (min-width : 735px) {
+	.li-container {
+		width: 33%;
+	}
+}
+@media screen and (min-width : 1175px) {
+	.li-container {
+		width: 25%;
+	}
 }
