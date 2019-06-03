@@ -106,6 +106,7 @@ nav h1 a {
   width: 100%;
   background-color: #3397DB;
   align-items: center;
+	padding: 3px 1%;
 }
 .filter-options h2 {
   color: white;
@@ -122,7 +123,7 @@ nav h1 a {
   letter-spacing: 0;
   margin: 10px;
   padding: 0 10px;
-  width: 200px;
+  width: 180px;
 }
 
 /* ====================== Restaurant Listing ====================== */
@@ -173,7 +174,7 @@ nav h1 a {
   display: inline-block;
   font-size: 10pt;
   margin: 15px 0 0;
-  padding: 8px 30px 10px;
+  padding: 3% 11.5% 4%;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -204,6 +205,57 @@ nav h1 a {
   position: absolute;
   width: 50%;
 }
+.review-head {
+	width: 100%;
+	background-color: #333;
+	padding: 6px 12px 6px 15px;
+	border-radius: 16px 0px 0px 0px;
+}
+.review-head p {
+	font-size: 1.2em;
+	display: inline;
+	color: white;
+}
+.review-head small {
+	color: #ccc;
+	float: right;
+}
+.rating {
+	display: inline-block;
+	margin: 15px;
+  padding: 8px 7px 0px;
+  text-align: center;
+  text-transform: uppercase;
+	border-radius: 2px;
+}
+.rating p {
+	letter-spacing: 0.6px;
+	color: white;
+  font-weight: 500;
+  line-height: 0;
+}
+.comment {
+	width: 100%;
+	padding: 0px 15px 15px;
+}
+.comment p {
+	font-size: 1.2em;
+}
+.green {
+	background-color: #28a745;
+}
+.light-green {
+	background-color: #2dc650;
+}
+.yellow {
+	background-color: #f5b800;
+}
+.orange {
+	background-color: #ff7300;
+}
+.red {
+	background-color: #dc3545;
+}
 #restaurant-name {
   color: #f18200;
   font-size: 20pt;
@@ -215,6 +267,7 @@ nav h1 a {
 }
 #restaurant-img {
 	width: 90%;
+	border-radius: 20px 0
 }
 #restaurant-address {
   font-size: 12pt;
@@ -259,9 +312,12 @@ nav h1 a {
   list-style-type: none;
   margin: 0 0 30px;
   overflow: hidden;
-  padding: 0 20px 20px;
+  /* padding: 0 20px 20px; */
   position: relative;
   width: 85%;
+	border-radius: 16px 0px 16px 0px;
+	display: flex;
+	flex-wrap: wrap;
 }
 #reviews-list li p {
   margin: 0 0 10px;
