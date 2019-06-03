@@ -150,19 +150,47 @@ createReviewHTML = (review) => {
   const li = document.createElement('li');
   const name = document.createElement('p');
   name.innerHTML = review.name;
-  li.appendChild(name);
+  const head = document.createElement('div');
+  head.className = 'review-head';
+  head.appendChild(name);
 
-  const date = document.createElement('p');
+  const date = document.createElement('small');
   date.innerHTML = review.date;
-  li.appendChild(date);
+  head.appendChild(date);
+  li.appendChild(head);
+
 
   const rating = document.createElement('p');
   rating.innerHTML = `Rating: ${review.rating}`;
   li.appendChild(rating);
+  const ratingContainer = document.createElement('div');
+  ratingContainer.className = 'rating';
+  switch (review.rating) {
+    case 5:
+      ratingContainer.classList.add('green');
+      break;
+    case 4:
+      ratingContainer.classList.add('light-green');
+      break;
+    case 3:
+      ratingContainer.classList.add('yellow');
+      break;
+    case 2:
+      ratingContainer.classList.add('orange');
+      break;
+    default:
+      ratingContainer.classList.add('red');
+
+  }
+  ratingContainer.appendChild(rating);
+  li.appendChild(ratingContainer);
 
   const comments = document.createElement('p');
   comments.innerHTML = review.comments;
-  li.appendChild(comments);
+  const commentsContainer = document.createElement('div');
+  commentsContainer.className = 'comment';
+  commentsContainer.appendChild(comments);
+  li.appendChild(commentsContainer);
 
   return li;
 }
