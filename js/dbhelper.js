@@ -154,10 +154,24 @@ class DBHelper {
   }
 
   /**
+   * Restaurant image alt attribute.
+   */
+   static imageAltForRestaurant(restaurant) {
+     return restaurant.alt;
+   }
+
+   /**
+    * Restaurant aria-label attribute for a tag (view details) .
+    */
+    static ariaLabelForDetailsA(restaurant) {
+      return restaurant.ariaLabelA;
+    }
+
+  /**
    * Map marker for a restaurant.
    */
    static mapMarkerForRestaurant(restaurant, map) {
-    // https://leafletjs.com/reference-1.3.0.html#marker  
+    // https://leafletjs.com/reference-1.3.0.html#marker
     const marker = new L.marker([restaurant.latlng.lat, restaurant.latlng.lng],
       {title: restaurant.name,
       alt: restaurant.name,
@@ -165,7 +179,7 @@ class DBHelper {
       })
       marker.addTo(newMap);
     return marker;
-  } 
+  }
   /* static mapMarkerForRestaurant(restaurant, map) {
     const marker = new google.maps.Marker({
       position: restaurant.latlng,
@@ -178,4 +192,3 @@ class DBHelper {
   } */
 
 }
-
