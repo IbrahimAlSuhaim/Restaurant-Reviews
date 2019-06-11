@@ -186,7 +186,7 @@ nav h1 a {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 9999;
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
@@ -213,7 +213,7 @@ nav h1 a {
 	border-radius: 16px 0px 0px 0px;
 }
 .review-head p {
-	font-size: 1.2em;
+	font-size: 1.1em;
 	display: inline;
 	color: white;
 }
@@ -240,7 +240,7 @@ nav h1 a {
 	padding: 0px 15px 15px;
 }
 .comment p {
-	font-size: 1.2em;
+	font-size: 1.1em;
 }
 .green {
 	background-color: #28a745;
